@@ -1,16 +1,21 @@
 <template>
   <div id="app">
-    <Home />
+    <!-- <Home /> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Home from "./views/home/Home";
+// import Home from "./views/home/Home";
 export default {
-  components: {
-    Home
-  }
+  // components: {
+  //   Home
+  // }
 };
 </script>
 
-<style lang="less"></style>
+<style>
+  body{
+    background-color: #f5f5f5;
+  }
+</style>
