@@ -2,12 +2,12 @@
     <div id="footer">
         <div class="container">
             <ul class="footer-wrap">
-                <li>首页</li>
-                <li>关于我们</li>
-                <li>常见问题</li>
-                <li>联系我们</li>
-                <li>服务协议</li>
-                <li>隐私申明</li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">常见问题</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">服务协议</a></li>
+                <li><a href="#">隐私申明</a></li>
             </ul>
             <p class="copyright">Copyright © 2020 深圳富士康科技集团</p>
             <p class="link">友情链接：xxx</p>
@@ -35,6 +35,10 @@ export default {
     .footer-wrap li{
         flex: 1;
         list-style: none;
+    }
+    .footer-wrap li a{
+        color: #fff;
+        text-decoration: none;
     }
     #footer p{
         color: #ccc;

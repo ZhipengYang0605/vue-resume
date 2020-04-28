@@ -1,46 +1,55 @@
 <template>
-  <div id="login">
+  <div id="pwdreset">
     <el-card class="box-card">
       <!-- title -->
       <div slot="header" class="clearfix">
-        <span>登录</span>
+        <span>找回密码</span>
       </div>
 
       <!-- content -->
       <div class="text item">
         <form action="/">
+        <!-- 用户账号 -->
           <div class="input-item">
             <span>
               <i></i>
             </span>
-            <input type="text" placeholder="请输入用户名" class="user_name" />
+            <input type="text" placeholder="请输入账号" class="user_account" />
           </div>
+          <!-- 验证邮箱：邮箱是事先获取好的，不能修改 -->
           <div class="input-item">
             <span>
               <i></i>
             </span>
-            <input
-              type="password"
-              placeholder="请输入用户密码"
-              class="user_pwd"
-            />
+            <input type="text" placeholder="将向1927863153@qq.com发送验证码" class="email" disabled />
           </div>
-
+        
+        <!-- 获取验证码 -->
           <div class="val-code">
             <input type="text" placeholder="请输入验证码" />
             <button class="val-btn">获取验证码</button>
           </div>
+
+          <!-- 点击“完成”验证正确，弹出以下内容 -->
           <div class="input-item">
-            <input type="submit" value="登录" class="login" />
-          </div>
-          <div class="login-foot">
-            <div class="pwd_ret">
-              <router-link to="/pwdreset">忘记密码?</router-link>
-            </div>
-            <div class="to-login">
-              <router-link to="/register" href="#">去注册</router-link>
+            <span>
               <i></i>
-            </div>
+            </span>
+            <input type="password" placeholder="请输入新密码" class="new_pwd" />
+          </div>
+
+          <div class="input-item">
+            <span>
+              <i></i>
+            </span>
+            <input type="password" placeholder="请再次输入新密码" class="new_pwd_twice" />
+          </div>
+
+          
+
+          
+          <div class="input-item">
+            <input type="submit" value="完成" class="reset_btn" />
           </div>
         </form>
       </div>
@@ -53,14 +62,13 @@ export default {};
 </script>
 
 <style scoped>
-/* box-card整体样式 */
-.box-card{
-    position: fixed;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    z-index: 99999999;
-    border: 1px solid #ccc;
+.box-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999999;
+  border: 1px solid #ccc;
 }
 .text {
   font-size: 14px;
@@ -96,6 +104,7 @@ input {
   border-radius: 4px;
   border: 1px solid #ccc;
   outline-color: #13d8a7;
+  color: #13d8a7;
 }
 .val-code input {
   padding-left: 10px;
@@ -118,22 +127,9 @@ input {
   color: #13d8a7;
   outline: none;
 }
-.login {
+.reset_btn {
   background: #13d8a7;
   color: #fff;
   border: 1px solid #13d8a7;
-}
-
-/* login-foot */
-.login-foot{
-    display: flex;
-    justify-content: space-around;
-}
-.login-foot a{
-    color: #222;
-    text-decoration: none;
-}
-.login-foot a:hover{
-    color: #13d8a7;
 }
 </style>

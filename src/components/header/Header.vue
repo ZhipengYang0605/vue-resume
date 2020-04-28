@@ -27,23 +27,26 @@
               <a class="nav-link" href="#">待开发2</a>
             </li>
           </ul>
-          <!-- 登录注册部分 -->
-          <span class="navbar-text">
-            <router-link to="/login" class="login">登录</router-link>
-            <i>/</i>
-            <a href="#" class="register">注册</a>
-          </span>
+          <!-- 1.登录注册部分-- 进入网页默认显示 -- -->
+          <RightDef v-show="false"/>
+          <!-- 2.登录成功显示 -->
+          <LoginSuccess />
         </div>
       </nav>
       <!-- 导航栏结束 -->
     </div>
-    <!-- login -->
-    <!-- <router-view></router-view> -->
   </div>
 </template>
 
 <script>
-export default {};
+import RightDef from "./components/RightDef";
+import LoginSuccess from "./components/LoginSuccess";
+export default {
+  components: {
+    RightDef,
+    LoginSuccess
+  }
+};
 </script>
 
 <style scoped>
@@ -78,17 +81,7 @@ export default {};
   color: #13D8a7;
 }
 
-/* 登录/注册部分 */
-.navbar-text{
-  display: inline-block;
-  padding: 5px 10px;
-  border: 1px solid #13D8a7;
-  border-radius: 14px;
-}
-.navbar-text a,
-.navbar-text i{
-  font-size: 14px;
-  text-decoration: none;
-  color: #13D8a7;
-}
+/* 登录/注册部分----未登录 */
+
+/* 头部右边样式----登录成功时显示 */
 </style>
