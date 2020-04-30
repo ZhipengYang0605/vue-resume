@@ -10,9 +10,12 @@ import PwdReset from './../components/PwdReset.vue';
 // 2.个人中心相关路由
 import User from './../views/user/User.vue';
 import EditUserInfo from './../views/user/components/EditUserInfo.vue';
-
 // 3.订单页面引入
 import Order from './../views/order/Order.vue';
+// 4.简历相关
+import NoResume from "./../views/resume/NoResume.vue"
+import AddResume from "./../views/resume/components/AddResume.vue"
+
 
 Vue.use(VueRouter);
 
@@ -22,7 +25,6 @@ const routes = [
   {path: '/login', name: 'Login', component: Login},
   {path: '/register', name: 'Register', component: Register},
   {path: '/pwdreset', name: 'PwdReset', component: PwdReset},
-
   // 个人中心相关路由
   {
     path: '/user', 
@@ -32,13 +34,23 @@ const routes = [
       {path: 'edit', name: "EditUserInfo", component: EditUserInfo},
     ]
   },
-
   // 订单相关路由
   {path: '/order', name: 'Order', component: Order},
+  // 简历相关
+  {
+    path: '/noresume', 
+    name: 'NoResume', 
+    component: NoResume,
+    children: [
+      {path: 'addresume', name: "AddResume", component: AddResume}
+      // {path: '', name: "AddResume", component: AddResume}
+    ]
+  },
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history',
 });
 
 export default router;

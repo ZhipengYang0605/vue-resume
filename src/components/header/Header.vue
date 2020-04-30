@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">首页</a>
+              <a class="nav-link" href="/">首页</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">待开发1</a>

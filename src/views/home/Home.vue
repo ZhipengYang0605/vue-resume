@@ -2,12 +2,12 @@
   <div id="home">
     <!-- 1.头部 -->
     <Header />
-    <!-- 2.banner部分 -->
+    <!-- 2.banner部分----登录未注册展示 -->
     <div class="banner">
       <div class="banner-img">
         <img src="./../../assets/images/home/banner.png" alt="">
       </div>
-      <div class="banner-btn">在线制作简历</div>
+      <div class="banner-btn" @click="goLogin">在线制作简历</div>
     </div>
     <!-- 3.footer部分 -->
     <Footer style="margin-top: 200px;"/>
@@ -18,6 +18,12 @@
 import Header from "./../../components/header/Header";
 import Footer from "./../../components/Footer";
 export default {
+  methods:{
+    // 点击跳转到登录页面
+    goLogin(){
+      this.$router.push("/login");
+    }
+  },
   components: {
     Header,
     Footer
@@ -49,5 +55,6 @@ export default {
     border: none;
     border-radius: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
   }
 </style>

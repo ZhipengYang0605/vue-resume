@@ -8,7 +8,7 @@
 
       <!-- content -->
       <div class="text item">
-        <form action="/">
+        <form action="/template">
           <div class="input-item">
             <span>
               <i></i>
@@ -31,7 +31,7 @@
             <button class="val-btn">获取验证码</button>
           </div>
           <div class="input-item">
-            <input type="submit" value="登录" class="login" />
+            <input type="submit" value="登录" class="login" @click="goTemplate"/>
           </div>
           <div class="login-foot">
             <div class="pwd_ret">
@@ -49,7 +49,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    goTemplate(){
+      this.$router.push("/noresume");
+      return false;
+    }
+  }
+};
 </script>
 
 <style scoped>
