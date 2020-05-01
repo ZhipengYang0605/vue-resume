@@ -43,6 +43,9 @@ export default {
 </script>
 
 <style scoped>
+.info-box{
+    margin-bottom: 250px;
+}
 .info-banner{
     padding: 100px 0 60px 0;
     background: linear-gradient(90deg,#13d8a7 3%,#00c2ef);

@@ -14,7 +14,12 @@ import EditUserInfo from './../views/user/components/EditUserInfo.vue';
 import Order from './../views/order/Order.vue';
 // 4.简历相关
 import NoResume from "./../views/resume/NoResume.vue"
+import Template from "./../views/resume/components/Template.vue"
 import AddResume from "./../views/resume/components/AddResume.vue"
+import HasResume from "./../views/resume/HasResume.vue"
+
+// 引入404界面
+import Error from './../components/Error.vue';
 
 
 Vue.use(VueRouter);
@@ -26,26 +31,18 @@ const routes = [
   {path: '/register', name: 'Register', component: Register},
   {path: '/pwdreset', name: 'PwdReset', component: PwdReset},
   // 个人中心相关路由
-  {
-    path: '/user', 
-    name: 'User', 
-    component: User,
-    children: [
-      {path: 'edit', name: "EditUserInfo", component: EditUserInfo},
-    ]
-  },
+  {path: '/user', name: 'User', component: User},
+  {path: '/user/edit', name: "EditUserInfo", component: EditUserInfo},
   // 订单相关路由
   {path: '/order', name: 'Order', component: Order},
   // 简历相关
-  {
-    path: '/noresume', 
-    name: 'NoResume', 
-    component: NoResume,
-    children: [
-      {path: 'addresume', name: "AddResume", component: AddResume}
-      // {path: '', name: "AddResume", component: AddResume}
-    ]
-  },
+  {path: '/noresume', name: 'NoResume', component: NoResume },
+  {path: '/template', name: 'Template', component: Template },
+  {path: '/addresume', name: 'AddResume', component: AddResume },
+  {path: '/hasresume', name: 'HasResume', component: HasResume },
+
+  // 配置404界面
+  {path: "*", name: "Error", component: Error }
 ];
 
 const router = new VueRouter({

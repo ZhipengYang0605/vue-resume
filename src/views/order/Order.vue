@@ -1,5 +1,5 @@
 <template>
-    <div id="order">购物中心</div>
+    <div id="order">会员中心</div>
 </template>
 
 <script>

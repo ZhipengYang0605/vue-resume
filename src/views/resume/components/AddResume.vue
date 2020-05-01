@@ -1,10 +1,8 @@
 <template>
     <div id="addresume">
-        123
         <!-- 1.Header -->
         <Header />
-        <!-- 2.模板 -->
-        
+
         <!-- 3.Footer -->
         <Footer />
     </div>
