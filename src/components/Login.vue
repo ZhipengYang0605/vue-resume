@@ -124,6 +124,7 @@ input {
   border-radius: 4px;
   color: #13d8a7;
   outline: none;
+  background: #fff;
 }
 .login {
   background: #13d8a7;

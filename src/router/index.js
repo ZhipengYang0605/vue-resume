@@ -12,6 +12,7 @@ import User from './../views/user/User.vue';
 import EditUserInfo from './../views/user/components/EditUserInfo.vue';
 // 3.订单页面引入
 import Order from './../views/order/Order.vue';
+import Pay from './../views/order/components/Pay.vue';
 // 4.简历相关
 import NoResume from "./../views/resume/NoResume.vue"
 import Template from "./../views/resume/components/Template.vue"
@@ -35,6 +36,7 @@ const routes = [
   {path: '/user/edit', name: "EditUserInfo", component: EditUserInfo},
   // 订单相关路由
   {path: '/order', name: 'Order', component: Order},
+  {path: '/pay', name: 'Pay', component: Pay},
   // 简历相关
   {path: '/noresume', name: 'NoResume', component: NoResume },
   {path: '/template', name: 'Template', component: Template },

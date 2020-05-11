@@ -10,7 +10,7 @@
       <div class="banner-btn" @click="goLogin">在线制作简历</div>
     </div>
     <!-- 3.footer部分 -->
-    <Footer style="margin-top: 200px;"/>
+    <Footer style="margin-top: 150px;"/>
   </div>
 </template>
 

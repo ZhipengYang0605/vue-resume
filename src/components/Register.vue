@@ -27,14 +27,12 @@
             </span>
             <input type="password" placeholder="请输入用户密码" class="user_pwd" />
           </div>
-         
          <div class="input-item">
             <span>
               <i></i>
             </span>
             <input type="password" placeholder="请再次输入用户密码" class="user_pwd_twice" />
           </div>
-        
         <div class="input-item">
             <span>
               <i></i>
@@ -124,6 +122,7 @@ input {
   border-radius: 4px;
   color: #13d8a7;
   outline: none;
+  background: #fff;
 }
 .register {
   background: #13d8a7;
